@@ -5,10 +5,14 @@ import os
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
-try:
-    import quicklytookerv
-except ImportError:
-    install("quicklytookerv")
+# List of required packages
+required_packages = ["quicklytookerv", "pyautogui", "requests"]
+
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
